@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class FuncaoSintatica extends Model
 {
+	protected $table = 'funcao_sintatica';
 	protected $fillable = ['definicao'];
+	public $timestamps = false;
 	
 	public function synsets(){
 		return $this->hasMany('App\Synset');

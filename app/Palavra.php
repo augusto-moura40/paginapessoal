@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Palavra extends Model
 {
+	protected $table = 'palavra';
 	protected $fillable = ['texto'];
 	
 	public function synsets(){

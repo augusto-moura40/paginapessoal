@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Synset extends Model
 {
-    protected $fillable = ['definicao', 'funcao_sintatica_id'];
+	protected $table = 'synset';
+	protected $fillable = ['definicao', 'funcao_sintatica_id'];
 	
 	public function palavras(){
 		return $this->belongsToMany('App\Palavra');
